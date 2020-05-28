@@ -1,1 +1,30 @@
-<p>graficas1 works!</p>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-grafico-dona [pieChartData]="graficos.grafico1.data" [pieChartLabels]="graficos.grafico1.labels" [pieChartType]="graficos.grafico1.type" [pieChartColors]="pieChartColors" [pieChartLegend]="graficos.grafico1.leyenda" [leyenda]="graficos.grafico1.leyenda"></app-grafico-dona>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-grafico-dona [pieChartData]="graficos.grafico2.data" [pieChartLabels]="graficos.grafico2.labels" [pieChartType]="graficos.grafico2.type" [pieChartColors]="pieChartColors" [pieChartLegend]="graficos.grafico2.leyenda" [leyenda]="graficos.grafico2.leyenda"></app-grafico-dona>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-grafico-dona [pieChartData]="graficos.grafico3.data" [pieChartLabels]="graficos.grafico3.labels" [pieChartType]="graficos.grafico3.type" [pieChartColors]="pieChartColors" [pieChartLegend]="graficos.grafico3.leyenda" [leyenda]="graficos.grafico3.leyenda"></app-grafico-dona>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-grafico-dona [pieChartData]="graficos.grafico4.data" [pieChartLabels]="graficos.grafico4.labels" [pieChartType]="graficos.grafico4.type" [pieChartColors]="pieChartColors" [pieChartLegend]="graficos.grafico4.leyenda" [leyenda]="graficos.grafico3.leyenda"></app-grafico-dona>
+            </div>
+        </div>
+    </div>
+</div>
