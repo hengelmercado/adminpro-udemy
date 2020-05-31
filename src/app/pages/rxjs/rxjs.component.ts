@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscriber } from 'rxjs';
-import { retry } from 'rxjs/operators';
+import { retry, map, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-rxjs',
@@ -29,7 +29,12 @@ export class RxjsComponent implements OnInit {
       const intervalo = setInterval(() => {
 
         contador += 1;
-        observable.next(contador);
+
+        const salida = {
+          valor: contador
+        };
+
+        observable.next(salida);
 
         if (contador === 3){
           clearInterval(intervalo);
@@ -42,7 +47,16 @@ export class RxjsComponent implements OnInit {
         } */
 
       }, 1000);
-    });
+    }).pipe(
+      map( resp => resp.valor),
+      filter( (valor, index) => {
+        if ( (valor % 2) === 1 ){
+          return true;
+        }else{
+          return false;
+        }
+      })
+    );
   }
 
 }
